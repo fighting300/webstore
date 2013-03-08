@@ -8,9 +8,9 @@
 
 #import "SAppDelegate.h"
 
-#import "SFirstViewController.h"
+#import "MainPage.h"
 
-#import "SSecondViewController.h"
+#import "FirstPage.h"
 
 @implementation SAppDelegate
 
@@ -26,9 +26,9 @@
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
     UIViewController *viewController1 = [[[SFirstViewController alloc] initWithNibName:@"SFirstViewController" bundle:nil] autorelease];
-    UIViewController *viewController2 = [[[SSecondViewController alloc] initWithNibName:@"SSecondViewController" bundle:nil] autorelease];
+
     self.tabBarController = [[[UITabBarController alloc] init] autorelease];
-    self.tabBarController.viewControllers = @[viewController1, viewController2];
+    self.tabBarController.viewControllers = @[viewController1];
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
